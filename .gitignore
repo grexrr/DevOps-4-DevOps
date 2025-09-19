@@ -1,0 +1,235 @@
+# ===========================================
+# DevOps-4-DevOps Project .gitignore
+# ===========================================
+
+# ===========================================
+# Operating System Files (操作系统文件)
+# ===========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# ===========================================
+# IDE & Editor Files (IDE 和编辑器文件)
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.iml
+*.ipr
+*.iws
+
+# ===========================================
+# Java & Spring Boot (Java 和 Spring Boot)
+# ===========================================
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Java
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# Spring Boot
+*.pid
+*.log
+application-*.properties
+!application.properties
+!application.yml
+
+# ===========================================
+# Node.js & React (Node.js 和 React)
+# ===========================================
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# ===========================================
+# Docker (Docker 相关)
+# ===========================================
+# Docker volumes and data
+docker-data/
+.docker/
+
+# ===========================================
+# Jenkins (Jenkins 相关)
+# ===========================================
+# Jenkins workspace
+.jenkins/
+jenkins_home/
+
+# ===========================================
+# Logs (日志文件)
+# ===========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===========================================
+# Database (数据库文件)
+# ===========================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ===========================================
+# Security & Secrets (安全和密钥)
+# ===========================================
+# Never commit these!
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+secrets/
+.secrets/
+
+# ===========================================
+# Build Artifacts (构建产物)
+# ===========================================
+dist/
+build/
+out/
+target/
+
+# ===========================================
+# Testing (测试相关)
+# ===========================================
+# Test results
+test-results/
+coverage/
+.nyc_output/
+
+# ===========================================
+# Documentation (文档生成)
+# ===========================================
+# Generated docs
+docs/_build/
+site/
+
+# ===========================================
+# Backup Files (备份文件)
+# ===========================================
+*.bak
+*.backup
+*.old
+README_backup.md
