@@ -1,5 +1,6 @@
 # DevOps-4-DevOps
-...is a pluggable multi-application DevOps console Dashboard system. It can not only build itself from source code through the entire pipeline: build → test → package → deploy ("deploy itself" as MVP), but also "integrate/orchestrate deployment of other Apps" (locally or on cloud). Frontend uses React (with charts), CI/CD uses Jenkins, containerization uses Docker.
+
+**DevOps-4-DevOps** is a pluggable multi-application DevOps console Dashboard system. MVP aims at building itself from source code through the entire pipeline: build → test → package → deploy ("deploy itself" as MVP). The extension will also "integrate/orchestrate deployment of other Apps" (locally or on cloud). Frontend uses React (with charts), CI/CD uses Jenkins, containerization uses Docker.
 
 
 ### Development Phases (Planned) 
