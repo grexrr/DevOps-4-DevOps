@@ -17,6 +17,8 @@ Thumbs.db
 # ===========================================
 # IDE & Editor Files (IDE 和编辑器文件)
 # ===========================================
+.cursor
+.cursorrules
 .vscode/
 .idea/
 *.swp

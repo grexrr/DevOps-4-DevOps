@@ -1,20 +1,27 @@
 # DevOps-4-DevOps
 
-**DevOps-4-DevOps** is a pluggable multi-application DevOps console Dashboard system. MVP aims at building itself from source code through the entire pipeline: build → test → package → deploy ("deploy itself" as MVP). The extension will also "integrate/orchestrate deployment of other Apps" (locally or on cloud). Frontend uses React (with charts), CI/CD uses Jenkins, containerization uses Docker.
+**DevOps-4-DevOps** is a pluggable multi-application DevOps console Dashboard system. MVP aims at building itself from source code through the entire pipeline: build → test → package → deploy ("deploy itself" as MVP). The extension will also integrate/orchestrate the CICD pipeline of other Apps (locally or on cloud). Frontend uses React (with charts), CI/CD uses Jenkins, containerization uses Docker.
 
 ### Project Structure (Ongoing)
 
 ```
 devops4devops/
-  console-frontend/     # React
-  console-backend/      # Spring Boot
-  demo-app/             
-  ops/
-    jenkins/            # Jenkins 的 docker-compose 与初始化脚本
-    compose/            # 本地一键跑的 docker-compose.yml（前后端+反向代理等）
-  docs/                 # 架构图、API 约定、Runbook
-  .gitignore
-  README.md
+├── console-frontend/          # React frontend application
+├── console-backend/           # Spring Boot backend application
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   └── resources/
+│   │   └── test/
+│   ├── pom.xml
+│   └── mvnw
+├── demo-app/                  # Demo application for testing
+├── ops/
+│   ├── jenkins/               # Jenkins docker-compose and initialization scripts
+│   └── compose/               # Local one-click run docker-compose.yml
+├── docs/                      # Architecture diagrams, API conventions, Runbook
+├── .gitignore
+└── README.md
   ```
 
 ### Development Phases (Planned) 
@@ -69,3 +76,25 @@ devops4devops/
 - Backend: JUnit + MockMVC, cover 70% initially, target 90% (documentation recommendation).
 - Frontend: React Testing Library; unit tests for basic components and API hooks
 - Enforce thresholds in Jenkins (mark red if below threshold)
+
+
+---
+### Dev Log
+#### Sept. 19 2025
+- ✅ **项目初始化完成**
+  - 创建了mono-repo基础结构
+  - 搭建了Spring Boot后端项目框架
+  - 配置了Maven依赖：Spring Boot 3.5.6, MongoDB, Security, Web等
+  - 创建了基础目录结构：console-frontend/, console-backend/, demo-app/, ops/
+
+- 🔄 **当前状态**
+  - 后端：仅有基础启动类，缺少业务逻辑层
+  - 前端：目录为空，待创建React项目
+  - Jenkins：配置目录为空，待搭建
+  - Demo应用：目录为空，待创建
+
+- 📋 **下一步计划**
+  - Phase 1: 完善后端基础架构（Controller/Service/Repository层）
+  - Phase 2: 实现MVP REST API（/api/apps, /api/pipelines, /api/metrics, /api/envs）
+  - Phase 3: 搭建React前端基础页面
+  - Phase 4: Jenkins Docker编排配置
