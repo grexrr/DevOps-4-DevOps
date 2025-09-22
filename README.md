@@ -375,3 +375,33 @@ Frontend → Controller → MetricsService → Dashboard Charts
 
 
 #### Sept. 22 2025
+
+- Successfully built and ran the Jenkins container locally (`devops4devops-jenkins`).
+- Configured GitHub credentials, allowing Jenkins to access and scan the repository.
+- Created a Multibranch Pipeline pointing to the `DevOps-4-DevOps` repository.
+- Added a minimal Jenkinsfile in the repository to verify Jenkins Pipeline recognition.
+- Achieved Phase 1 goals: Jenkins is running, can connect to GitHub, and execute the simplest pipeline.
+
+**Current Dockerfile Achievements**
+- Based on the `jenkins/jenkins:lts-jdk17` image.
+- Installed Docker CLI, Buildx, and Compose plugins within the container (via Docker's official apt source).
+- Ensured Jenkins container can run `docker build` / `docker compose` and control the host Docker by mounting the host's `/var/run/docker.sock`.
+- Pre-installed common plugins (git, github, workflow-aggregator, blueocean, docker-workflow).
+
+**Current docker-compose.yml Achievements**
+- Defined the `jenkins` service, building the image based on the above Dockerfile.
+- Exposed ports:
+  - 8080 → Jenkins UI
+  - 50000 → JNLP agent (potential future use)
+- Mounted volumes:
+  - `jenkins_home:/var/jenkins_home` → Persist Jenkins configurations, plugins, and job history.
+  - `/var/run/docker.sock:/var/run/docker.sock` → Allows Jenkins inside the container to call the host Docker.
+- Restart policy: `unless-stopped`, ensuring the container restarts automatically if it exits unexpectedly.
+
+**Current Jenkinsfile Achievements**
+- Located in the root directory of the repository.
+- Minimal pipeline definition with two stages:
+  - `Checkout`: Pulls the source code.
+  - `Hello`: Prints a verification message to confirm pipeline execution.
+- Purpose: Placeholder to verify Jenkins Multibranch Pipeline can find and execute the Jenkinsfile.
+- Next step (Phase 2) will expand into a real build and deployment process (testing, image packaging, compose up).
