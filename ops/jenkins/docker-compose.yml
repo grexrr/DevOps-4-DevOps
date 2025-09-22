@@ -1,0 +1,17 @@
+name: devops4devops
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devops4devops-jenkins
+    ports:
+      - "8080:8080"   # Jenkins UI
+      - "50000:50000" # JNLP agent port (future use)
+    volumes:
+      - jenkins_home:/var/jenkins_home   # persist Jenkins data
+      - /var/run/docker.sock:/var/run/docker.sock # Phase 2: let Jenkins talk to Docker
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:

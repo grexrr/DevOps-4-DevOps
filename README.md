@@ -78,7 +78,7 @@ devops4devops/
 
 ---
 
-### MVP Phase: User Registers a New Application
+### Dataflow (MVP Phase): User Registers a New Application
 
 #### Step 1: User Action (Frontend)
 ```
@@ -374,4 +374,4 @@ Frontend → Controller → MetricsService → Dashboard Charts
 5. **Repository Layer**: Data persistence (to be implemented)
 
 
-
+#### Sept. 22 2025
