@@ -1,11 +1,11 @@
-package com.devops4devops.console_backend.services;
+package com.devops4devops.services;
 
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.devops4devops.console_backend.gateway.JenkinsGateway;
+import com.devops4devops.gateway.JenkinsGateway;
 
 @Service
 public class DeploymentOrchestrator {

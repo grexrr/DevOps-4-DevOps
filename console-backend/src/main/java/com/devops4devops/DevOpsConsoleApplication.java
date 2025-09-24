@@ -1,4 +1,4 @@
-package com.devops4devops.console_backend;
+package com.devops4devops;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,11 +1,11 @@
-package com.devops4devops.console_backend.services;
+package com.devops4devops.services;
 
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.devops4devops.console_backend.model.PipelineTemplate;
+import com.devops4devops.model.PipelineTemplate;
 
 @Service
 public class PipelineTemplateService {

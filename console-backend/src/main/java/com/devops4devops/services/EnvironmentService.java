@@ -1,10 +1,10 @@
-package com.devops4devops.console_backend.services;
+package com.devops4devops.services;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.devops4devops.console_backend.model.Environment;
+import com.devops4devops.model.Environment;
 
 @Service
 public class EnvironmentService {

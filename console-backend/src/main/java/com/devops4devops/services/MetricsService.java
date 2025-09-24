@@ -1,4 +1,4 @@
-package com.devops4devops.console_backend.services;
+package com.devops4devops.services;
 
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.devops4devops.console_backend.model;
+package com.devops4devops.model;
 
 import java.util.Map;
 

@@ -405,3 +405,27 @@ Frontend → Controller → MetricsService → Dashboard Charts
   - `Hello`: Prints a verification message to confirm pipeline execution.
 - Purpose: Placeholder to verify Jenkins Multibranch Pipeline can find and execute the Jenkinsfile.
 - Next step (Phase 2) will expand into a real build and deployment process (testing, image packaging, compose up).
+
+**GitHub Credentials**
+- Generated a **GitHub Personal Access Token (classic)** with `repo` scope for Jenkins to access the repository.
+- In Jenkins → *Manage Jenkins → Credentials → Global*, created credentials using **“Username with password”** type:
+  - **Username**: GitHub account username (`grexrr`)
+  - **Password**: The generated GitHub PAT (token)
+- Note: *Secret text* type credential did not show up in Multibranch Pipeline’s Git SCM configuration. Using *Username with password* allowed Jenkins to properly recognize and authenticate.
+- With this credential selected in Multibranch Pipeline configuration, Jenkins successfully connected to GitHub, scanned the repository, and found the Jenkinsfile.
+
+#### Sept. 24 2025
+
+- Backend Minimum Viable APIs
+  - Verified all API endpoints working correctly on port 8081
+  - Tested `/actuator/health`, `/version`, `/api/apps`, `/api/pipelines`, `/api/metrics`, `/api/envs`
+  - Confirmed Spring Boot Actuator configuration working properly
+
+- **Frontend Initialization** (React + Vite)
+  - Created React + Vite project from scratch using `npm create vite@latest`
+  - Installed required dependencies: Material-UI, Axios, Recharts
+  - Created component files: `Dashboard.jsx`, `Apps.jsx`
+  - **Issue Encountered**: App.jsx was still using default Vite template instead of custom components
+  - **Resolution**: Updated App.jsx to import and use Dashboard and Apps components
+  - Configured Vite proxy to connect frontend (port 5173) to backend (port 8081)
+  - **Current Status**: Frontend running but showing default Vite interface instead of custom DevOps console

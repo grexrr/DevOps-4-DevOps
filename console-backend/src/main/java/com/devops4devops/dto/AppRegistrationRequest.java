@@ -1,4 +1,4 @@
-package com.devops4devops.console_backend.dto;
+package com.devops4devops.dto;
 
 public class AppRegistrationRequest {
     

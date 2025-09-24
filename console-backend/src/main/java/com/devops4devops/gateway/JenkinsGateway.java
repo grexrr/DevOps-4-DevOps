@@ -1,11 +1,11 @@
-package com.devops4devops.console_backend.gateway;
+package com.devops4devops.gateway;
 
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import com.devops4devops.console_backend.model.Build;
+import com.devops4devops.model.Build;
 
 @Component
 public class JenkinsGateway {
